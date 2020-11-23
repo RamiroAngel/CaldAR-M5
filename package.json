@@ -1,0 +1,15 @@
+{
+  "name": "caldar",
+  "version": "1.0.0",
+  "description": "Boilers in CaldAr's proyect",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "author": "Juan Moscatelli",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
