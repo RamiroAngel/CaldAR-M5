@@ -39,4 +39,4 @@ app.get('/data/boiler-types/:filter', (req,res) => {
     }
     console.log(req.query.type)
     return res.json(filterboilerTypes);
-};
+});
