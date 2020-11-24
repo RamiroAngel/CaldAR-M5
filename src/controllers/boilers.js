@@ -1,17 +1,17 @@
 const express = require('express');
 const { type } = require('os');
 const path = require('path');
-const boilers = require('../Data/data.json');
+const boilers = require('../data/data.json');
 
 const app = express();
 app.listen(3000,()=>{
     console.log('App running in port 3000')
 })
-app.use(express.static(path.join(__dirname,'Controlles')))
+app.use(express.static(path.join(__dirname,'controllers')))
 
 //get all boilers 
 const getBoilersAll = (req,res) => {
-    var datos = path.join(__dirname,'../Data/data.json')
+    var datos = path.join(__dirname,'../data/data.json')
     res.sendFile(datos)
 };
 app.get('/',getBoilersAll);
