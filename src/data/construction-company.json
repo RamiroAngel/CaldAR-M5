@@ -1,0 +1,43 @@
+[
+    {
+        "id_company":1,
+        "cuit":20480287631,
+        "email":"nroyans0@skype.com",
+        "buildings":[],
+        "fiscal_address":"956 Farwell Lane",
+        "user":"6930 Alpine Way"
+    },
+    {
+        "id_company":2,
+        "cuit":33254973403,
+        "email":"asim1@studiopress.com",
+        "buildings":[],
+        "fiscal_address":"7616 Holmberg Terrace",
+        "user":[]
+    },
+    {
+        "id_company":3,
+        "cuit":33350364078,
+        "email":"wmaryska2@nature.com",
+        "buildings":[],
+        "fiscal_address":"4 Loomis Court",
+        "user":[]
+    },
+    {
+        "id_company":4,
+        "cuit":20121451752,
+        "email":"caltoft3@cam.ac.uk",
+        "buildings":[],
+        "fiscal_address":"8899 Messerschmidt Junction",
+        "user":[]
+    },
+    {
+        "id_company":5,
+        "cuit":33371453860,
+        "email":"ageffinger4@berkeley.edu",
+        "buildings":[],
+        "fiscal_address":"8 Grayhawk Alley",
+        "user":[]
+    }
+]
+
