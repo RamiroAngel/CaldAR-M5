@@ -1,4 +1,4 @@
-const express = require('express');
+ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 const technicians = require('technicians.js');
@@ -7,10 +7,10 @@ const technicians = require('technicians.js');
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
 
 // Gets all technicians
-app.get('./data/technicians.json', (req, res) => res.json(technicians));
+app.get('/data/technicians', (req, res) => res.json(technicians));
 
 // Gets technician by ID
-app.get('./data/technicians.json/id_technician', (req, res) => {
+app.get('/data/technicians/id', (req, res) => {
     const found = technicians.some(technicians => technicians.id_technician === parseInt(req.query.id_technician));
     if(found){
         res.json(technicians.filter(technicians => technicians.id_technician === parseInt(req.query.id_technician)));
@@ -20,7 +20,7 @@ app.get('./data/technicians.json/id_technician', (req, res) => {
 });
 
 // Gets technicians by Attribute
-app.get('./data/technicians.json/filter', (req,res) => {
+app.get('/data/technicians/:filter', (req,res) => {
     const filterTechnicians = technicians;
     if(req.query.id_technician !== undefined){
         filterTechnicians = filterTechnicians.filter(technicians => technicians.id_boiler === parseInt(req.query.id_technician));
@@ -59,7 +59,7 @@ app.get('./data/technicians.json/filter', (req,res) => {
 // Delete technicians by id
 
 // Curly braces shows an error in the vscode
-app.delete('./data/technicians.json/id_technician', (req,res) => {
+app.delete('/data/technicians./id_technician', (req,res) => {
     const found = technicians.some(technicians => technicians.id_technician === parseInt(req.query.id_technician));
     if(found){
         res.json({
