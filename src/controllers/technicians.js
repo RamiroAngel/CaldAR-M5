@@ -1,4 +1,4 @@
- const express = require('express');
+const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 const technicians = require('technicians.js');
@@ -54,7 +54,7 @@ app.get('/data/technicians/:filter', (req,res) => {
     }
     console.log(req.query.type)
     return res.json(filterTechnicians);
-}
+});
 
 // Delete technicians by id
 
@@ -67,4 +67,4 @@ app.delete('/data/technicians./id_technician', (req,res) => {
             technicians: technicians.filter(technicians => technicians.id_technician !== parseInt(req.query.id_technician))});
     }else{
             res.status(400).json({msg : `No member with id of ${req.query.id_technician}`});
-}
+    };
